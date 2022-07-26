@@ -1,0 +1,87 @@
+---
+title: "R to Python"
+author: "Prithviraj Lakkakula"
+date: "7/25/2022"
+output:
+  pdf_document: 
+    toc: yes
+    highlight: zenburn
+  html_document: 
+    toc: yes
+    highlight: zenburn
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+library(reticulate)
+#https://www.geeksforgeeks.org/python-set-operations-union-intersection-difference-symmetric-difference/
+```
+
+<!--
+:::: {style="display: grid;"} ### this code if you add below will display one after the other top and bottom.
+#For more info, see here: https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html
+-->
+
+
+## Creating a dataframe and performing set operations
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+# construct a dataframe
+df <- data.frame(a = c(1, 2, 3, 4, 5),
+                 b = c(3, 4, 5, 6, 7))
+df
+#intersect(df$a, df$b)
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+import pandas as pd
+df = pd.DataFrame({'a': [1, 2, 3, 4, 5],
+                          'b': [3, 4, 5, 6, 7]})
+df
+#set(df['a']) & set(df['b'])
+```
+:::
+
+::::
+
+
+
+## Importing data from a variety of data formats
+
+## How to call heads and tails?
+
+## How to know the shape/length of the data?
+
+## How to access single and multiple columns?
+
+## Get summary stats of the data variables
+
+## How to graph plots (scatter plot, histogram, boxplot, barplot etc.)?
+
+## Handling missing values?
+
+## Handling outliers?
+
+## Checking class imbalance?
+
+## Splitting the dataset into training and test sets for both cross section and time series data cases?
+
+## Run a linear regression model along with predictions on test set, model evaluation, performance metrics?
+
+## Run a logistic regression model along with predictions on test set, model evaluation, performance metrics?
+
+
