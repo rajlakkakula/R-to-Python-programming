@@ -24,8 +24,9 @@ library(reticulate)
 #For more info, see here: https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html
 -->
 
+# Basics of Programming
 
-## Creating a dataframe and performing set operations
+## Creating a dataframe 
 
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 
@@ -39,7 +40,6 @@ R code
 df <- data.frame(a = c(1, 2, 3, 4, 5),
                  b = c(3, 4, 5, 6, 7))
 df
-#intersect(df$a, df$b)
 ```
 
 :::
@@ -51,14 +51,94 @@ Python code
 import pandas as pd
 df = pd.DataFrame({'a': [1, 2, 3, 4, 5],
                           'b': [3, 4, 5, 6, 7]})
-df
-#set(df['a']) & set(df['b'])
+print(df)
 ```
 :::
 
 ::::
 
+## Imports
 
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+sqrt(36)
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+import math
+math.sqrt(36)
+
+#importing a function
+from math import sqrt
+sqrt(36)
+
+# show all functions in math model
+print(dir(math))
+```
+:::
+
+::::
+
+## Data Types
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+class(5)
+class(5.0)
+class('Five')
+class(FALSE)
+
+## check if an object is of a given type
+is.numeric(5)
+is.character('Five')
+is.logical(FALSE)
+
+## Convert an object to a given type
+as.character(5.5)
+#as.numeric, as.factor etc to convert to numeric and factor types
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+type(5)
+type(5.0)
+type('five')
+type(False)
+
+## check if an object is of a given type
+isinstance(5.0, int)
+isinstance(5.0, (int, float))
+isinstance('Five', str)
+isinstance('Five', int)
+isinstance(False, bool)
+
+## Convert an object to a given type
+str(5.5)
+```
+:::
+
+::::
 
 ## Importing data from a variety of data formats
 

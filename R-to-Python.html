@@ -254,7 +254,11 @@ pre code {
 
 <div id="TOC">
 <ul>
-<li><a href="#creating-a-dataframe-and-performing-set-operations">Creating a dataframe and performing set operations</a></li>
+<li><a href="#basics-of-programming">Basics of Programming</a>
+<ul>
+<li><a href="#creating-a-dataframe">Creating a dataframe</a></li>
+<li><a href="#imports">Imports</a></li>
+<li><a href="#data-types">Data Types</a></li>
 <li><a href="#importing-data-from-a-variety-of-data-formats">Importing data from a variety of data formats</a></li>
 <li><a href="#how-to-call-heads-and-tails">How to call heads and tails?</a></li>
 <li><a href="#how-to-know-the-shapelength-of-the-data">How to know the shape/length of the data?</a></li>
@@ -267,6 +271,7 @@ pre code {
 <li><a href="#splitting-the-dataset-into-training-and-test-sets-for-both-cross-section-and-time-series-data-cases">Splitting the dataset into training and test sets for both cross section and time series data cases?</a></li>
 <li><a href="#run-a-linear-regression-model-along-with-predictions-on-test-set-model-evaluation-performance-metrics">Run a linear regression model along with predictions on test set, model evaluation, performance metrics?</a></li>
 <li><a href="#run-a-logistic-regression-model-along-with-predictions-on-test-set-model-evaluation-performance-metrics">Run a logistic regression model along with predictions on test set, model evaluation, performance metrics?</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -274,8 +279,10 @@ pre code {
 :::: {style="display: grid;"} ### this code if you add below will display one after the other top and bottom.
 #For more info, see here: https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html
 -->
-<div id="creating-a-dataframe-and-performing-set-operations" class="section level2">
-<h2>Creating a dataframe and performing set operations</h2>
+<div id="basics-of-programming" class="section level1">
+<h1>Basics of Programming</h1>
+<div id="creating-a-dataframe" class="section level2">
+<h2>Creating a dataframe</h2>
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
 <div>
 <p>R code</p>
@@ -289,21 +296,98 @@ pre code {
 ## 3 3 5
 ## 4 4 6
 ## 5 5 7</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#intersect(df$a, df$b)</span></span></code></pre></div>
 </div>
 <div>
 <p>Python code</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&#39;a&#39;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>],</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&#39;b&#39;</span>: [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]})</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#set(df[&#39;a&#39;]) &amp; set(df[&#39;b&#39;])</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">&#39;a&#39;</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>],</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                          <span class="st">&#39;b&#39;</span>: [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]})</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre></div>
 <pre><code>##    a  b
 ## 0  1  3
 ## 1  2  4
 ## 2  3  5
 ## 3  4  6
 ## 4  5  7</code></pre>
+</div>
+</div>
+</div>
+<div id="imports" class="section level2">
+<h2>Imports</h2>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
+<div>
+<p>R code</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">36</span>)</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+</div>
+<div>
+<p>Python code</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">36</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#importing a function</span></span></code></pre></div>
+<pre><code>## 6.0</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>sqrt(<span class="dv">36</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># show all functions in math model</span></span></code></pre></div>
+<pre><code>## 6.0</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">dir</span>(math))</span></code></pre></div>
+<pre><code>## [&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;comb&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;dist&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;gcd&#39;, &#39;hypot&#39;, &#39;inf&#39;, &#39;isclose&#39;, &#39;isfinite&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;isqrt&#39;, &#39;lcm&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;log2&#39;, &#39;modf&#39;, &#39;nan&#39;, &#39;nextafter&#39;, &#39;perm&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;prod&#39;, &#39;radians&#39;, &#39;remainder&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;tau&#39;, &#39;trunc&#39;, &#39;ulp&#39;]</code></pre>
+</div>
+</div>
+</div>
+<div id="data-types" class="section level2">
+<h2>Data Types</h2>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
+<div>
+<p>R code</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fl">5.0</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&#39;Five&#39;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## check if an object is of a given type</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(<span class="st">&#39;Five&#39;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.logical</span>(<span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Convert an object to a given type</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(<span class="fl">5.5</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;5.5&quot;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#as.numeric, as.factor etc to convert to numeric and factor types</span></span></code></pre></div>
+</div>
+<div>
+<p>Python code</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="fl">5.0</span>)</span></code></pre></div>
+<pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="st">&#39;five&#39;</span>)</span></code></pre></div>
+<pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="va">False</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">## check if an object is of a given type</span></span></code></pre></div>
+<pre><code>## &lt;class &#39;bool&#39;&gt;</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">isinstance</span>(<span class="fl">5.0</span>, <span class="bu">int</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">isinstance</span>(<span class="fl">5.0</span>, (<span class="bu">int</span>, <span class="bu">float</span>))</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">isinstance</span>(<span class="st">&#39;Five&#39;</span>, <span class="bu">str</span>)</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">isinstance</span>(<span class="st">&#39;Five&#39;</span>, <span class="bu">int</span>)</span></code></pre></div>
+<pre><code>## False</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">isinstance</span>(<span class="va">False</span>, <span class="bu">bool</span>)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Convert an object to a given type</span></span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span>(<span class="fl">5.5</span>)</span></code></pre></div>
+<pre><code>## &#39;5.5&#39;</code></pre>
 </div>
 </div>
 </div>
@@ -342,6 +426,7 @@ pre code {
 </div>
 <div id="run-a-logistic-regression-model-along-with-predictions-on-test-set-model-evaluation-performance-metrics" class="section level2">
 <h2>Run a logistic regression model along with predictions on test set, model evaluation, performance metrics?</h2>
+</div>
 </div>
 
 
