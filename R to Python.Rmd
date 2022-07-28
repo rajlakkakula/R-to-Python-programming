@@ -140,6 +140,162 @@ str(5.5)
 
 ::::
 
+## Basic Math
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+5 + 4 #addition
+5 - 4 #subtraction
+5 * 4 #multiplication
+5 ^ 4 #exponent
+5 %% 4 # divides and remainder is the output. modulo
+100 / 4 #division
+floor(100 / 3) #returns floor
+ceiling(100 / 3)
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+import math
+5 + 4 #addition
+5 - 4 #subtraction
+5 * 4 #multiplication
+5 ** 4 #exponent
+5 % 4 # divides and remainder is the output. modulo
+100 / 4 #division
+100 // 3 #returns floor #math.floor(100 / 3) also returns the same
+math.ceil(100 / 3)
+```
+:::
+
+::::
+
+## Comparisons and Boolean Operations
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+## Assignment statement
+x <- 10
+
+## comparisons
+x > 10
+x >= 10
+x != 10
+x == 7
+
+## Boolean operations
+6 > 4 & 5 > 4
+6 > 4 | 5 > 4
+!FALSE
+FALSE | !FALSE & TRUE #evaluation order: ! (not), & (and), | (or)
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+## Assignment statement
+x = 10
+
+## comparisons
+x > 10
+x >= 10
+x != 10
+x == 7
+
+## Boolean operations
+6 > 4 and 5 > 4
+6 > 4 or 5 > 4
+not False
+False or not False and True #evaluation order: ! (not), & (and), | (or)
+```
+:::
+
+::::
+
+## Conditional Statements
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+## if statement
+x <- 10
+if (x > 0) {#condition
+  print("success") #statement
+}  
+
+## if/else statement
+if (x > 0){
+  print("success")} else {
+  print("not success")
+  }
+
+## if/elif/else statement
+if (x > 0){
+  print("success")
+} else if (x == 0) {
+  print("not success")
+} else {
+  print("not so success")
+}
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+## if statement
+x = 10
+if x > 0:
+  print('success')
+  
+## if/else statement
+if x > 0:
+  print('success')
+else:
+  print('not success')
+
+## if/elif/else statement
+if x > 0:
+  print('success')
+elif x == 0:
+  print('not success')
+else:
+  print('not so success')
+```
+:::
+
+::::
+
+## Lists
+
+
+
 ## Importing data from a variety of data formats
 
 ## How to call heads and tails?
