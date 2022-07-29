@@ -3,13 +3,13 @@ title: "R to Python"
 author: "Prithviraj Lakkakula"
 date: "7/25/2022"
 output:
-  pdf_document: 
-    toc: yes
-    highlight: zenburn
   html_document: 
     toc: yes
     highlight: zenburn
     theme: cosmo
+  pdf_document: 
+    toc: yes
+    highlight: zenburn
 ---
 
 ```{r setup, include=FALSE}
@@ -293,6 +293,72 @@ else:
 ::::
 
 ## Lists
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+
+::: {}
+
+R code
+
+```{r warning=FALSE, message=FALSE}
+### empty list
+empty_list <- list()
+empty_list
+
+## creating a list
+create_list <- list("he", "she", "him")
+create_list
+
+## print 1st and 3rd element of create list
+create_list[[1]] #R follows 1-indexing
+create_list[[3]]
+
+## length of the list
+length(create_list)
+
+## appending the list
+
+create_list[[4]] <- "her"
+create_list
+
+create_list <- append(create_list, c("me", "you"))
+create_list 
+str(create_list)
+```
+
+:::
+
+::: {}
+Python code
+
+```{python}
+## empty list
+empty_list = []
+empty_list2 = list()
+empty_list
+empty_list2
+
+## create a list
+create_list = ['he', 'she', 'him']
+create_list
+
+## print 1st and 3rd element of create list
+create_list[0] #python follows zero-indexing
+create_list[2]
+
+## length of a list
+len(create_list)
+
+## appending the list
+create_list.append('her')
+create_list.extend(['me', 'you'])
+create_list
+type(create_list)
+```
+:::
+
+::::
 
 
 
